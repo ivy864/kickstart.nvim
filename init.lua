@@ -188,14 +188,14 @@ require('lazy').setup({
     },
   },
 
+  --[[
   {
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
+
   },
+  --]]
 
   {
     -- Set lualine as statusline
@@ -204,7 +204,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        --theme = 'LunarPink',
         component_separators = '|',
         section_separators = '',
       },
@@ -268,6 +268,27 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
 }, {})
 
+-- slightly cursed way of creating a custom theme
+--[[
+require('onedark').setup {
+  style = 'darker',
+--[[
+  colors = {
+    purple = '#e621af',
+    yellow = '#79e0e2',
+    orange = '#09e4e6',
+    blue = '#05a6a8',
+    green = '#df6cbe',
+    bg0 = '#131313',
+    red = '#df6cbe',
+    --grey = '#df6cbe',
+    light_grey = '#09e4e6',
+    fg = '#df6cbe'
+  },
+}
+]]--
+vim.cmd.colorscheme 'LunarPink'
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
@@ -279,12 +300,12 @@ vim.o.hlsearch = false
 vim.wo.number = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+vim.o.mouse = ''
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
+-- vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -421,8 +442,12 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
+    modules = {},
+    sync_install = false,
+    ignore_install = {},
+
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash' },
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'java' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
