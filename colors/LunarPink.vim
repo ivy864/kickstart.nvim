@@ -13,13 +13,13 @@ endfunction
 let s:Color0 = '#dddddd' " WHITE
 let s:Color1 = '#e621af' " PINK
 let s:Color2 = '#e09ece' " PINK_LIGHTER
-let s:Color3 = '#05a6a8' "CYAN_DARK
-let s:Color4 = '#79e0e2' "CYAN_LIGHT
+let s:Color3 = '#05a6a8' " CYAN_DARK
+let s:Color4 = '#79e0e2' " CYAN_LIGHT
 let s:Color5 = '#df6cbe' " PINK_LIGHT
-let s:Color6 = '#09e4e6' "CYAN
+let s:Color6 = '#09e4e6' " CYAN
 let s:Color7 = '#131313' " BACKGROUND
 let s:Color8 = '#202020' " ?
-let s:Color9 = '#aa8405' " yellow
+let s:Color9 = '#f0b800' " YELLOW_DARK
 let s:Color10 = '#c50000' " dark red?
 let s:Color11 = '#2d2d2d'
 let s:Color12 = '#777777' " GREY
@@ -27,6 +27,7 @@ let s:Color13 = '#717171'
 let s:Color14 = '#ffffff' " white
 let s:Color15 = '#383838' " GREY_DARK
 let s:Color16 = '#3caa05' " green
+let s:Color17 = '#222222' " GREY_DARKER
 
 call s:highlight('Operator', '', s:Color0, '')
 call s:highlight('Keyword', '', s:Color1, '')
@@ -40,10 +41,10 @@ call s:highlight('String', '', s:Color5, '')
 call s:highlight('Number', '', s:Color6, '')
 call s:highlight('Constant', '', s:Color6, '')
 call s:highlight('StatusLine', s:Color1, s:Color7, '')
-call s:highlight('WildMenu', s:Color7, s:Color0, '')
-call s:highlight('Pmenu', s:Color7, s:Color0, '')
-call s:highlight('PmenuSel', s:Color0, s:Color8, '')
-call s:highlight('PmenuThumb', s:Color7, s:Color0, '')
+call s:highlight('WildMenu', s:Color17, s:Color0, '')
+call s:highlight('Pmenu', s:Color17, s:Color2, '')
+call s:highlight('PmenuSel', s:Color15, s:Color5, '')
+call s:highlight('PmenuThumb', s:Color15, s:Color17, '')
 call s:highlight('DiffAdd', 'NONE', s:Color16, '')
 call s:highlight('DiffChange', 'NONE', s:Color9, '')
 call s:highlight('DiffDelete', 'NONE', s:Color10, '')
@@ -53,14 +54,15 @@ call s:highlight('CursorLine', s:Color11, '', '')
 call s:highlight('ColorColumn', s:Color11, '', '')
 call s:highlight('SignColumn', s:Color7, '', '')
 call s:highlight('LineNr', '', s:Color12, '')
-call s:highlight('TabLine', s:Color7, s:Color13, '')
-call s:highlight('TabLineSel', s:Color14, s:Color8, '')
-call s:highlight('TabLineFill', s:Color7, s:Color13, '')
+call s:highlight('TabLine', s:Color17, s:Color2, 'NONE')
+call s:highlight('TabLineSel', s:Color7, s:Color5, '')
+call s:highlight('TabLineFill', s:Color7, s:Color17, '')
 call s:highlight('TSPunctDelimiter', '', s:Color0, '')
 call s:highlight('Comment', '', s:Color13, '')
 call s:highlight('MatchParen', 'NONE', s:Color6, '')
+call s:highlight('CursorLineNR', 'NONE', s:Color1, '')
+call s:highlight('Special', '', s:Color9, '')
 
-highlight! link CursorLineNR Identifier
 highlight! link Whitespace Comment
 highlight! link TSTagDelimiter Type
 highlight! link Macro Function

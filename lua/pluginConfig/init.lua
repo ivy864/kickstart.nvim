@@ -126,26 +126,23 @@ require('lazy').setup({
     },
   },
 
-  --[[
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-
-  },
-  --]]
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
-        --theme = 'LunarPink',
-        component_separators = '|',
-        section_separators = '',
+        icons_enabled = true,
+        theme = 'LunarPink',
       },
+      inactive_sections = {
+        lualine_a = {'filename'},
+        lualine_b = {},
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {'location'}
+      }
     },
   },
 
