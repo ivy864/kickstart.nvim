@@ -1,0 +1,72 @@
+v idk
+[d Go to previous diagnostic message
+]d Go to next diagnostic message
+' 'e Open floating diagnostic message
+' 'q Open diagnostics list
+' 'hs git stage hunk
+' 'hr git reset hunk
+' 'hS git state buffer
+' 'hu undo stage hunk
+' 'hR git reset buffer
+' 'hp preview git hunk
+' 'hb git blame line
+' 'hd git diff against index
+' 'hD git diff against last commit
+' 'tb toggle git blame line
+' 'td togle git show deleted
+
+ idk what this is: map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'select git hunk' })
+
+Telescope:
+' '? Find recently opened files
+' '' ' Find existing buffers
+' '/ fuzzily search in current buffer
+' 's/ Search in open files
+' 'ss Search Select Telescope (?)
+' 'gf Search git files
+' 'sf search files
+' 'sh earch help
+' 'sw search current word
+' 'sg search by grep
+' 'sG search by grep on git root
+' 'sd search diagnostics
+' 'sr search resume
+
+Treesitter:
+<C-Space> start incremental selection (normal)
+<C-Space> increment to the upper named parent (visual)
+<C-S> increment to the upper scope (visual)
+<M-Space> decrement to the previous named node
+
+idk what the rest of the bindings do
+
+LSP:
+' 'rn Rename
+' 'ca Code actions
+gd Goto definition
+gr Goto references
+gI goto implementation
+' 'D type definition (?)
+' 'ds document symbols
+' 'ws workspace symbols
+
+K hover defintion
+<C-k> Signature documentation
+gD goto declaration
+' 'wf workspace add folder
+' 'wr workspace remove folder
+' 'wl workspace list folders
+:Format format current buffer with lsp
+
+completion mappings (insert mode):
+<C-n> ins completion? 
+<C-p> ?
+<C-d> scroll docs?
+<C-f> scroll docs?
+<C-Space> complete
+<CR> confirm
+<Tab> text item 
+<S-Tab> previous item
+
+other kebinds:
+<C-S-u> insert unicode charecter (this is a binding in the terminal emulator kitty, not vim)
