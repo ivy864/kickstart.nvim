@@ -29,7 +29,7 @@ let s:Color15 = '#383838' " GREY_DARK
 let s:Color16 = '#3caa05' " green
 let s:Color17 = '#222222' " GREY_DARKER
 
-call s:highlight('Operator', '', s:Color0, '')
+call s:highlight('Operator', '', s:Color6, '')
 call s:highlight('Keyword', '', s:Color1, '')
 call s:highlight('Identifier', '', s:Color2, '')
 call s:highlight('Function', '', s:Color3, '')
@@ -61,13 +61,22 @@ call s:highlight('TSPunctDelimiter', '', s:Color0, '')
 call s:highlight('Comment', '', s:Color13, '')
 call s:highlight('MatchParen', 'NONE', s:Color6, '')
 call s:highlight('CursorLineNR', 'NONE', s:Color1, '')
-call s:highlight('Special', '', s:Color9, '')
+call s:highlight('Special', '', s:Color6, '')
+call s:highlight('Statement', '', s:Color1, '')
+call s:highlight('PreProc', '', s:Color1, '')
+
+call s:highlight('@punctuation', '', s:Color9, '')
+call s:highlight('@type.qualifier', '', s:Color1, '')
+call s:highlight('@type', '', s:Color4, '')
+call s:highlight('@type', '', s:Color4, '')
+
+
 
 highlight! link Whitespace Comment
 highlight! link TSTagDelimiter Type
 highlight! link Macro Function
 highlight! link TSFunction Function
-highlight! link Operator Keyword
+"highlight! link Operator Keyword
 highlight! link TSField Constant
 highlight! link Repeat Conditional
 highlight! link TSParameter Constant
@@ -83,14 +92,14 @@ highlight! link TSProperty TSField
 highlight! link TSString String
 highlight! link TSPunctSpecial TSPunctDelimiter
 highlight! link TSFloat Number
-highlight! link TSType Type
+"highlight! link TSType Type
 highlight! link TSConditional Conditional
 highlight! link TSRepeat Repeat
 highlight! link TSConstant Constant
 highlight! link TSConstBuiltin TSVariableBuiltin
 highlight! link TSNamespace TSType
 highlight! link TSTag MyTag
-highlight! link Conditional Operator
+""highlight! link Conditional Operator
 highlight! link TelescopeNormal Normal
 highlight! link TSPunctBracket MyTag
 highlight! link TSFuncMacro Macro
