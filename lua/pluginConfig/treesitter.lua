@@ -70,3 +70,6 @@ vim.defer_fn(function()
     },
   }
 end, 0)
+
+--vim.api.nvim_set_hl(0, "@punctuation", { link = "Number" })
+
