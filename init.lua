@@ -33,7 +33,7 @@ vim.cmd([[
 
     hi Normal guibg=NONE ctermbg=NONE
 
-    source abbreviations.vim
+    source ~/.config/nvim/abbreviations.vim
 ]])
 
 -- [[ Install `lazy.nvim` plugin manager ]]
