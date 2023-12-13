@@ -32,6 +32,8 @@ vim.cmd([[
     colorscheme LunarPink 
 
     hi Normal guibg=NONE ctermbg=NONE
+
+    source abbreviations.vim
 ]])
 
 -- [[ Install `lazy.nvim` plugin manager ]]
