@@ -64,10 +64,21 @@ call s:highlight('CursorLineNR', 'NONE', s:Color1, '')
 call s:highlight('Special', '', s:Color6, '')
 call s:highlight('Statement', '', s:Color1, '')
 call s:highlight('PreProc', '', s:Color1, '')
+call s:highlight('Underlined', '', s:Color0, '')
+
+" HTML
+call s:highlight('htmlLink', '', s:Color0, '')
+call s:highlight('htmlEndTag', '', s:Color3, '')
+call s:highlight('htmlTag', '', s:Color3, '')
+call s:highlight('htmlArg', '', s:Color6, '')
+call s:highlight('htmlTagName', '', s:Color2, '')
+call s:highlight('htmlSpecialTagName', '', s:Color2, '')
+call s:highlight('Title', '', s:Color0, '')
+
+
 
 call s:highlight('@punctuation', '', s:Color9, '')
 call s:highlight('@type.qualifier', '', s:Color1, '')
-call s:highlight('@type', '', s:Color4, '')
 call s:highlight('@type', '', s:Color4, '')
 
 
@@ -103,3 +114,4 @@ highlight! link TSTag MyTag
 highlight! link TelescopeNormal Normal
 highlight! link TSPunctBracket MyTag
 highlight! link TSFuncMacro Macro
+

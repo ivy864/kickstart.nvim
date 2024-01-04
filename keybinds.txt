@@ -70,3 +70,9 @@ completion mappings (insert mode):
 
 other kebinds:
 <C-S-u> insert unicode charecter (this is a binding in the terminal emulator kitty, not vim)
+
+spellcheck:
+z= check spelling at cursor, replace word w corrected word (normal mode)
+]s go to next misspelled word
+[s go to previous misspelled word
+

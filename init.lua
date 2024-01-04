@@ -32,6 +32,8 @@ vim.cmd([[
     colorscheme LunarPink 
 
     hi Normal guibg=NONE ctermbg=NONE
+  
+    setlocal spell spelllang=en_us
 
     source ~/.config/nvim/abbreviations.vim
 ]])
